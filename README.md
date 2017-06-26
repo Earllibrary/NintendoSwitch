@@ -1,4 +1,4 @@
-# NintendoSwitch
+# Switch_notify_me
 
 ## Overview
 This application(bot) checks Nintendo Online Store whether Nintendo Switch is availabel.
@@ -36,7 +36,7 @@ Lower `N` will allow more accurate stock analyses, but you should be aware that 
 
 ***
 ***
-# NintendoSwitch(日本語)
+# Switch_notify_me(日本語)
 
 ## 概要
 Nintendoオンラインストアにアクセスし、Switchの在庫があるかを確認するボットです。在庫が確認できれば、LINEで通知します。
