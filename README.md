@@ -3,9 +3,7 @@
 ## Overview
 This application(bot) checks Nintendo Online Store whether Nintendo Switch is availabel.
 If Switch is on sale, notify you by LINE.
-This bot access the web page every `N` sec. 
-Lower `N` will allow more accurate stock analyses, but you should be aware that frequent access will overload the web server.
-Default `N` is  30.
+
 
 ## Dependences
 - Python 3.x
@@ -32,12 +30,42 @@ Bot will begin scraping with
 `"commands"` is no more supported after Python 3.x.
 
 - You can change `N` parameter to adjust the frequency of access.  
-Default frequency is `N = 30` sec.
+Default frequency is `N = 30` sec.  
+Lower `N` will allow more accurate stock analyses, but you should be aware that frequent access will overload the web server.
+
+
+***
+***
+# NintendoSwitch(日本語)
 
 ## 概要
 Nintendoオンラインストアにアクセスし、Switchの在庫があるかを確認するボットです。在庫が確認できれば、LINEで通知します。
-`N`秒おきにオンラインストアにアクセスします。`N`が小さいほどより頻繁にストアにアクセスすることになり、より正確に在庫状況を知ることができます。
-しかし、あまりに小さくすると、それはF5攻撃のようなものになって良くありません。`N = 30`程度が推奨されます。
 
 ## 環境
 Python 3.x
+
+## 使い方
+まず、LINELINE通知するために必要な**トークン**なるものを取得します。  
+LINEを使って通知を行うために、LINE NotifyというLINEが提供しているサービスを利用する必要があります。  
+ここで、あなたが通知サービスを開発するためのキーが必要となります、それが**トークン**です。（便宜的にそのようなものだとしておきます）  
+
+さて、このトークンの取得手続きは以下のリンクから行うことができます。
+https://notify-bot.line.me/
+この手続きの詳細は割愛しますが、ググるとたくさん出てくるのでわからない方は調べてください。
+
+登録が終わり、トークンが次のようなランダムな文字列の形式で表示されます。これをメモしてください。  
+`yourToken = gda73Gyhkxxxxxxxxxxxxxxx`
+トークンは一度表示されたら二度と表示されないので、メモし損ねたらまた取得してください。  
+
+ここで取得したトークンを、`SOLDOUT.py`中の`yourToken`に代入します。
+
+これで準備ができました。
+
+つぎのコマンドで動かします。
+
+    $python SOLDOUT.py
+    
+## 備考
+- `N` の値を小さくするほどより頻繁にアクセスするようになりますが、あまりに小さくするとF5攻撃のような、ある種のサービス妨害攻撃になりかねません。適切な調整をおねがいします。
+- Python 2.x 系では`subprocess`が使えないので、代わりに`commands`パッケージを使います。  
+`SOLDOUT.py`中の`subprocess`を`commands`で置換するだけで2.x系にも対応できるようになります。
