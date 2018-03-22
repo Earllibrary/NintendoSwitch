@@ -16,23 +16,23 @@ https://notify-bot.line.me/
 
 Your **token** will be represented like `yourToken = gda73GyhiYuiklJ8fJ983`
 
-Then replace `yourToken` with **your own token** in the `SOLDOUT.py`
+Then replace `yourToken` with **your own token** in the `check_store.py`
 
 Now, get ready for running.
 
 Bot will begin scraping with
     
-    $python SOLDOUT.py
+    $python check_store.py
 
 
 ### Note
 
-- If your Python version is `2.x`, replace all the word `"subprocess"` to `"commands"` in `SOLDOUT.py`.  
+- If your Python version is `2.x`, replace all `subprocess`s to `commands`s in `check_store.py`.  
 `"commands"` is no more supported after Python 3.x.
 
 - You can change `N` parameter to adjust the frequency of access.  
 Default frequency is `N = 30` sec.  
-Lower `N` will allow more accurate stock analyses, but you should be aware that frequent access will overload the web server.
+Lower `N` will allow more accurate stock analyses, but please be aware that frequent access will overload the web server.
 
 
 ***
@@ -65,9 +65,9 @@ https://notify-bot.line.me/
 
 つぎのコマンドで動かします。
 
-    $python SOLDOUT.py
+    $python check_store.py
     
 ## 備考
 - `N` の値を小さくするほどより頻繁にアクセスするようになりますが、あまりに小さくするとF5攻撃のような、ある種のサービス妨害攻撃になりかねません。適切な調整をおねがいします。
 - Python 2.x 系では`subprocess`が使えないので、代わりに`commands`パッケージを使います。  
-`SOLDOUT.py`中の`subprocess`を`commands`で置換するだけで2.x系にも対応できるようになります。
+`check_store.py`中の`subprocess`を`commands`で置換するだけで2.x系にも対応できるようになります。
