@@ -1,19 +1,20 @@
 # Switch_notify_me
 
 ## Overview
-This application(bot) checks Nintendo Online Store whether Nintendo Switch is availabel.
-If Switch is on sale, notify you by LINE.
+This bot checks Nintendo Online Store whether Nintendo Switch is availabel.
+If Switch is on sale, it notifies you by LINE.
 
 
 ## Dependences
 - Python 3.x
 
 ## Usage
-Before you run the bot, you must get **token** for notification via LINE.  
-Registar and get **token** from URL below.  
+Before you run the bot, you have to have **token** for notification via LINE.  
+Please registar and get **token** from following URL:
+
 https://notify-bot.line.me/
 
-Your **token** will be represented like `yourToken = gda73Gyhkxxxxxxxxxxxxxxx`
+Your **token** will be represented like `yourToken = gda73GyhiYuiklJ8fJ983`
 
 Then replace `yourToken` with **your own token** in the `SOLDOUT.py`
 
@@ -35,7 +36,6 @@ Lower `N` will allow more accurate stock analyses, but you should be aware that 
 
 
 ***
-***
 # Switch_notify_me(日本語)
 
 ## 概要
@@ -53,11 +53,9 @@ LINEを使って通知を行うために、LINE NotifyというLINEが提供し�
 
 https://notify-bot.line.me/
 
-この手続きの詳細は割愛しますが、ググるとたくさん出てくるのでわからない方は調べてください。
-
 登録が終わり、トークンが次のようなランダムな文字列の形式で表示されます。これをメモしてください。  
 
-`yourToken = gda73Gyhkxxxxxxxxxxxxxxx`
+`yourToken = gda73GyhiYuiklJ8fJ983`
 
 トークンは一度表示されたら二度と表示されないので、メモし損ねたらまた取得してください。  
 
