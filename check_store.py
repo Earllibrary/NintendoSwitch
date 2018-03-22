@@ -5,9 +5,8 @@ import time
 import requests
 from datetime import datetime
 
+# target URL
 ninURL = "https://store.nintendo.co.jp/category/NINTENDOSWITCH/HAC_S_KAYAA.html"
-
-#access the URL above every N minutes and check the word "SOLD OUT".
 
 #notify via LINE if SWITCH is available
 def message_LINE(message):
@@ -40,4 +39,4 @@ if __name__ == "__main__":
 				message_LINE("SWITCH now on sale!\nat\n"+ninURL)
 			time.sleep(N)
 	except:
-		message_LINE("エラーが発生して止まりました")
+		message_LINE("エラーが発生しました")
